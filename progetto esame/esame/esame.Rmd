@@ -30,10 +30,9 @@ knitr::opts_chunk$set(cache = TRUE, message = FALSE, warning = FALSE)
 # Packages
 library(ggplot2)
 
-# create data
+# import data
 energia <- read.csv("../dataset/energia.csv")
 
-# stacked area chart
 ggplot(energia, aes(x=year, y=TWh, fill=type)) + 
   geom_area()
 
@@ -44,11 +43,12 @@ ggplot(energia, aes(x=year, y=TWh, fill=type)) +
 ## Qual è la migliore da utilizzare?
 
 ```{r, echo=FALSE}
+# Packages
 library(ggplot2)
 
+# import data
 vittime = read.csv("../dataset/vittime.csv")
 
-# Most basic bubble plot
 ggplot(vittime, aes(x=type, y=decease)) + 
   geom_bar(stat = "identity") +
   coord_flip()+
@@ -73,10 +73,9 @@ library(ggplot2)
 library(dplyr)
 library(tibble)
 
-# Change data rownames as a real column called 'carName'
+# import data
 data =read.csv("../dataset/incidenti2.csv")
 
-# Plot
 ggplot(data, aes(x=year, y=scale)) +
   geom_point() + 
   geom_label( 
