@@ -1,0 +1,15 @@
+/* block quotes */
+blockquote {
+  background: #f9f9f9;
+}
+
+/* scrolling */
+slides > slide {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+}
+
+/* hide page numbers */
+slides > slide:not(.nobackground):after {
+  content: '';
+}
