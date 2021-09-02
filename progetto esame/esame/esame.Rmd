@@ -74,7 +74,7 @@ library(dplyr)
 library(tibble)
 
 # import data
-data =read.csv("../dataset/incidenti2.csv")
+data =read.csv("../dataset/incidenti.csv")
 
 ggplot(data, aes(x=year, y=scale)) +
   geom_point() + 
